@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+/src/Images/netflix-1-logo-svgrepo-com.svg
+/src/Images/netflix-2-logo-svgrepo-com.svg
