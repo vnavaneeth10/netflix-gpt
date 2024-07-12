@@ -15,56 +15,78 @@ const Login = () => {
   const password = useRef(null);
 
   const toggleSignInForm = () => {
+
       setIsSignInForm(!isSignInForm);
+
   }
 
   const handleButtonClick = () =>{
+
       //Validate the form data
     const message = checkValidData(email.current.value, password.current.value);
+
     setErrorMessage(message);
+
       if(message) return;
 
       //sign in sign up Logic
       if(!isSignInForm){
+
         //signup logic
         createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+
     console.log(user);
+    
   })
+
   .catch((error) => {
+
     const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorCode + "-" + errorMessage)
+
   });
 
 
       } else {
+
         //sign in logic
         signInWithEmailAndPassword(auth, email.current.value, password.current.value)
   .then((userCredential) => {
+
     // Signed in 
     const user = userCredential.user;
     console.log(user)
+
   })
+
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorCode + "-" + errorMessage);
+
   });
 
       }
   }
+
+
   return (
+
     <div>
 
       <Header/>
 
       <div 
       className='absolute'>
+
       <img 
-      src='https://assets.nflxext.com/ffe/siteui/vlv3/0552717c-9d8c-47bd-9640-4f4efa2de663/537e2c5e-c750-4d4c-9f7a-e66fe93eb977/IN-en-20240701-POP_SIGNUP_TWO_WEEKS-perspective_WEB_b00eeb83-a7e8-4b5b-8ff7-86ed92c51caf_small.jpg' alt='background-image'/>
+      src='https://assets.nflxext.com/ffe/siteui/vlv3/0552717c-9d8c-47bd-9640-4f4efa2de663/537e2c5e-c750-4d4c-9f7a-e66fe93eb977/IN-en-20240701-POP_SIGNUP_TWO_WEEKS-perspective_WEB_b00eeb83-a7e8-4b5b-8ff7-86ed92c51caf_small.jpg' 
+      alt='background-image'/>
+
       </div>
     
     <form 
@@ -96,7 +118,10 @@ const Login = () => {
       placeholder='Password' 
       className='p-4 my-4 w-full bg-gray-800 rounded-sm'/>
 
-      <p className='text-red-600 font-bold text-lg py-2'>{errorMessage}</p>
+      <p 
+      className='text-red-600 font-bold text-lg py-2'>
+      {errorMessage}
+      </p>
       
       <button 
       className='p-4 my-4 bg-red-700 w-full rounded-lg' 
@@ -113,6 +138,7 @@ const Login = () => {
     </form>
 
     </div>
+
   )
 }
 
