@@ -17,6 +17,7 @@ const Login = () => {
   const toggleSignInForm = () => {
 
       setIsSignInForm(!isSignInForm);
+      //toggleing signin to signup and viceversa
 
   }
 
@@ -26,6 +27,7 @@ const Login = () => {
     const message = checkValidData(email.current.value, password.current.value);
 
     setErrorMessage(message);
+      //returning error message if validation fails
 
       if(message) return;
 
@@ -47,6 +49,7 @@ const Login = () => {
     const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorCode + "-" + errorMessage)
+    //setting the error message
 
   });
 
@@ -91,6 +94,7 @@ const Login = () => {
     
     <form 
     onSubmit={(e)=> e.preventDefault()}
+        //preventDefault() method stops the default action of an element from happening
     className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-65'>
 
       <h1 
