@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+//importing slice from @reduxjs/toolkit
 
 const userSlice = createSlice({
     //slices for the appStore declaration
@@ -20,6 +21,7 @@ const userSlice = createSlice({
 })
 
 export  const {addUser, removeUser} = userSlice.action
+//exporting each reducers from slices
 
 export default userSlice.reducer;
 
