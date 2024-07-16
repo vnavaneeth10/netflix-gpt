@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './Header'
 
 const Browse = () => {
 
@@ -7,7 +8,7 @@ const Browse = () => {
     <div>
 
       
-      Browse
+      <Header/>
     
     </div>
   )
