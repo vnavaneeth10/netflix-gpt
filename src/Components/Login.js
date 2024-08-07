@@ -78,7 +78,7 @@ const Login = () => {
       setErrorMessage(error.message);
     });
 
-    console.log(user);
+    
     //navigate("/browse");
     
   })
@@ -101,7 +101,7 @@ const Login = () => {
 
     // Signed in 
     const user = userCredential.user;
-    // console.log(user)
+    
     // navigate("/browse");
   })
 
