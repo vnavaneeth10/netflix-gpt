@@ -11,13 +11,30 @@ export const USER_AVATAR =
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjI4MGUzMTk4OWJhNTZiNzQ1YmU3NzhjOGMzZGVjMCIsIm5iZiI6MTcyMjM1MDkyMS44NzI2MzEsInN1YiI6IjY1OTE5NjIzZTY0MGQ2MDE0MGQ1YTQ4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Y6PtMngQxasgL9VD6CuzYVE5ghAYVDFxkyuFKC5Euh8'
-    }
+      Authorization: 'Bearer' + process.env.REACT_APP_TMDB_KEY,
+    },
   };
 
   export const IMG_CDN = "https://image.tmdb.org/t/p/w500"
 
 
   export const SUPPORTED_LANGUAGES = [{identifier: "en", name:"English"},
-    {identifier: "hindi", name:"Hindi"},{identifier: "spanish", name:"Spanish"},{identifier: "malayalam", name:"Malayalam"}
+                                      {identifier: "hindi", name:"Hindi"},
+                                      {identifier: "spanish", name:"Spanish"},
+                                      {identifier: "malayalam", name:"Malayalam"}
   ];
+
+ export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+
+ //sk-XgDzNd-zazMCBC_Xx6KuZ1gOgB5PO3e0PS6LX-vullT3BlbkFJ3yQZDwr-e1hjfnThI45RSgXKPWv7JoVNMUwFTBcu0A - for the last time
+ 
+ //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 -something her
+
+ //sk-proj-1Rrt6Ega5MjX9q1wYbhcCLuObilogz2dVwUgzNLsbqhtqs35EoYlZJMyzOtp9EmQLt-19HetcET3BlbkFJmI8Sexzs0reBsZ98u95ckFMtgfR_WmDxQzb3cApL_LuuTrCtjNS8U2uglR97XRWCuuEW74xO8A-first one
+ 
+ //sk-XgDzNd-zazMCBC_Xx6KuZ1gOgB5PO3e0PS6LX-vullT3BlbkFJ3yQZDwr-e1hjfnThI45RSgXKPWv7JoVNMUwFTBcu0A - gopu
+
+
+ //AIzaSyBs7frzoMQ_sKATZiLOCcUFjF0NaoZYaiA - gemmni AI key
+
+ //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 - radha
