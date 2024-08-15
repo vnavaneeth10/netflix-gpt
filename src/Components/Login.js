@@ -126,6 +126,7 @@ const Login = () => {
       className='absolute'>
 
       <img 
+      className='h-screen object-cover'
       src={BG_URL} 
       alt='background-image'/>
 
@@ -134,7 +135,7 @@ const Login = () => {
     <form 
     onSubmit={(e)=> e.preventDefault()}
         //preventDefault() method stops the default action of an element from happening
-    className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-65'>
+    className='w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-65'>
 
       <h1 
       className='font-bold text-white text-3xl py-4'>
